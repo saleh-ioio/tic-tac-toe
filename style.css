@@ -1,1 +1,30 @@
-/*# sourceMappingURL=style.css.map */
+:root {
+  --main-color:#4b5563;
+  --cell-color: #9ca3af;
+  --bg-color:#0f172a;
+  background-color: var(--bg-color);
+}
+
+.gameCont {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 300px;
+  height: 300px;
+  gap: 5px;
+  background-color: black;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
+  padding: 20px;
+  background-color: var(--main-color);
+  border-radius: 10px;
+}
+
+.cells {
+  background-color: var(--main-color);
+}/*# sourceMappingURL=style.css.map */
