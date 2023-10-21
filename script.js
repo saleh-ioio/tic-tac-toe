@@ -22,13 +22,16 @@ const gameboard = (function (){
         for(let i = 0; i < cells.length; i++ ){
 
             if(cells[i].every(cell => cell == sign)){
-                return isWinner;
+                return true;
+
             }
         }
         return false;
     }
 
-    checkColumns = (sing) => {
+
+
+    checkColumns = (sign) => {
         let column = []
         for(let i = 0; i<cells.length; i++){
             for(let j=0; j<cells[i].length; j++){
@@ -42,6 +45,7 @@ const gameboard = (function (){
         return false;
     }
     
+
     checkDiagnals = (sign) => {
         let diagonal = [];
         //diagonal
@@ -56,7 +60,7 @@ const gameboard = (function (){
        let revDiagonal = [];
        //reverse diagonal
        for (let i = 0; i < cells.length; i++) {
-        revDiagonal = cells[i][cells.length - i-1]
+        revDiagonal.push( cells[i][cells.length - i-1])
        }
        if(revDiagonal.every(cell => cell == sign )){
         return true;
@@ -65,6 +69,7 @@ const gameboard = (function (){
        return false;
 
     }
+
 
 return {}
 })();
