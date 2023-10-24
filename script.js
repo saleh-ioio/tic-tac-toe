@@ -18,6 +18,9 @@ const gameboard = (function (){
         [0,0,0]
     ];
 
+    let getCells = () => {
+        return cells};
+
     let checkRows = (sign) => {
         for(let i = 0; i < cells.length; i++ ){
 
@@ -29,9 +32,24 @@ const gameboard = (function (){
         return false;
     }
 
+    let chooseMove = (rowNum, column, sign) => {
+        if(cells[rowNum][column]== 0){
+            cells[rowNum][column] = sign;
+            return true;
+        }else{
+            return false;
+        }
+    }
 
+    let resetCells = () => {
+        getCells = [
+        [0,0,0],
+        [0,0,0],
+        [0,0,0]
+    ];
+    }
 
-    checkColumns = (sign) => {
+    let checkColumns = (sign) => {
         let column = []
         for(let i = 0; i<cells.length; i++){
             for(let j=0; j<cells[i].length; j++){
@@ -46,7 +64,7 @@ const gameboard = (function (){
     }
     
 
-    checkDiagnals = (sign) => {
+    let checkDiagnals = (sign) => {
         let diagonal = [];
         //diagonal
        for (let i = 0; i < cells.length; i++) {
@@ -70,6 +88,14 @@ const gameboard = (function (){
 
     }
 
+    let CheckWinner = (sign) => {
+        
+        if(checkRows(sign) || checkColumns(sign) || checkDiagnals(sign) ){
+            return true;
+        }
+    }
 
-return {}
+    
+
+return {CheckWinner, getCells, resetCells, chooseMove}
 })();
