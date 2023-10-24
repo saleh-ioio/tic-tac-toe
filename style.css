@@ -25,6 +25,30 @@ main {
   border-radius: 10px;
 }
 
+.playerSelection {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 30px;
+}
+
+.playerTag {
+  margin: 0 50px;
+  border-radius: 10px;
+  background-color: var(--main-color);
+  transition: background-color 2s ease-out;
+}
+.playerTag h3 {
+  text-align: center;
+}
+
+.glowPlayerBg {
+  background-color: var(--bg-color);
+}
+
 .cells {
   background-color: var(--main-color);
+}
+.cells h1 {
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

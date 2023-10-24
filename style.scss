@@ -25,7 +25,33 @@ main{
     background-color: var(--main-color);
     border-radius: 10px;
 }
+.playerSelection{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 30px;
+
+}
+.playerTag{
+    margin: 0 50px;
+    border-radius: 10px;
+    background-color: var(--main-color);
+    -webkit-transition: background-color 2s ease-out;
+    -moz-transition: background-color 2s ease-out;
+    -o-transition: background-color 2s ease-out;
+    transition: background-color 2s ease-out;
+
+    h3{
+        text-align: center;
+    }
+}
+.glowPlayerBg{
+    background-color: var(--bg-color);
+}
 
 .cells{
     background-color: var(--main-color);
+    h1{
+        text-align: center;
+    }
 }
